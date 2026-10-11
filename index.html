@@ -1,0 +1,1280 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+  <title>Glow Beauty 🌟 | Centro Estético y Spa en Cuenca</title>
+  <meta name="description" content="Centro estético y spa profesional en Cuenca con Michelle Pinos: faciales avanzados, láser y tratamientos regenerativos con valoración personalizada.">
+  
+  <!-- Open Graph / Social Sharing Meta Tags -->
+  <meta property="og:title" content="Glow Beauty | Centro Estético y Spa en Cuenca">
+  <meta property="og:description" content="Tratamientos faciales, láser y estética avanzada con Michelle Pinos.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://i.imgur.com/mj0HJB0.png">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="https://i.imgur.com/mj0HJB0.png">
+
+  <!-- Bootstrap 5.3 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;0,900;1,400&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <!-- FontAwesome 6 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <style>
+    :root {
+      --bg-base: #D9D0BF;
+      --text-main: #4A2C0B;
+      --color-gold: #C9A24B;
+      --color-rosa: #D98F8F;
+      --color-rosa-hover: #c47c7c;
+      --card-bg: #FFFFFF;
+      --transition-smooth: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      color: var(--text-main);
+      background-color: #FAF8F5;
+      overflow-x: hidden;
+      /* Add bottom padding on mobile to prevent sticky bar overlap */
+      padding-bottom: env(safe-area-inset-bottom, 70px);
+    }
+
+    @media (min-width: 992px) {
+      body {
+        padding-bottom: 0;
+      }
+    }
+
+    h1, h2, h3, h4, h5, h6, .font-serif {
+      font-family: 'Playfair Display', serif;
+    }
+
+    /* Navbar styling with Logo */
+    .navbar-glow {
+      background: rgba(250, 248, 245, 0.96);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(201, 162, 75, 0.2);
+      transition: var(--transition-smooth);
+    }
+    .navbar-brand-logo {
+      height: 42px;
+      width: auto;
+      object-fit: contain;
+      transition: transform 0.3s ease;
+    }
+    @media (min-width: 768px) {
+      .navbar-brand-logo {
+        height: 50px;
+      }
+    }
+    .navbar-brand:hover .navbar-brand-logo {
+      transform: scale(1.05);
+    }
+    .nav-link {
+      color: var(--text-main) !important;
+      font-weight: 500;
+      position: relative;
+      padding: 0.6rem 1rem !important;
+    }
+    .nav-link::after {
+      content: '';
+      position: absolute;
+      width: 0;
+      height: 2px;
+      bottom: 4px;
+      left: 1rem;
+      background-color: var(--color-gold);
+      transition: var(--transition-smooth);
+    }
+    .nav-link:hover::after {
+      width: calc(100% - 2rem);
+    }
+
+    /* WhatsApp Pulse Animation */
+    @keyframes pulse-zoom {
+      0% {
+        transform: scale(1);
+        box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.6);
+      }
+      50% {
+        transform: scale(1.08);
+        box-shadow: 0 0 0 14px rgba(37, 211, 102, 0);
+      }
+      100% {
+        transform: scale(1);
+        box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+      }
+    }
+
+    .btn-whatsapp-animated {
+      background-color: #25d366 !important;
+      color: #FFF !important;
+      border: none !important;
+      font-weight: 600;
+      animation: pulse-zoom 2.2s infinite ease-in-out;
+      transition: var(--transition-smooth);
+    }
+    .btn-whatsapp-animated:hover {
+      background-color: #20ba5a !important;
+      transform: scale(1.08) !important;
+      animation: none;
+    }
+
+    .btn-glow {
+      background-color: var(--color-rosa);
+      color: #FFF;
+      border: none;
+      font-weight: 600;
+      padding: 0.75rem 1.8rem;
+      border-radius: 50px;
+      transition: var(--transition-smooth);
+      box-shadow: 0 4px 15px rgba(217, 143, 143, 0.3);
+      min-height: 48px; /* Touch target size optimized */
+    }
+    .btn-glow:hover {
+      background-color: var(--color-rosa-hover);
+      color: #FFF;
+      transform: translateY(-2px);
+      box-shadow: 0 8px 25px rgba(217, 143, 143, 0.45);
+    }
+    .btn-outline-glow {
+      border: 2px solid var(--color-gold);
+      color: #FFF;
+      font-weight: 600;
+      padding: 0.75rem 1.8rem;
+      border-radius: 50px;
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(5px);
+      transition: var(--transition-smooth);
+      min-height: 48px;
+    }
+    .btn-outline-glow:hover {
+      background-color: var(--color-gold);
+      color: #FFF;
+      transform: translateY(-2px);
+    }
+
+    .hero-section {
+      position: relative;
+      background-image: url('https://i.imgur.com/XMpV1sQ.jpeg');
+      background-size: cover;
+      background-position: center;
+      background-attachment: scroll; /* safer for mobile browsers */
+      padding: 130px 0 80px;
+      color: #FFFFFF;
+      overflow: hidden;
+    }
+    @media (min-width: 992px) {
+      .hero-section {
+        background-attachment: fixed;
+        padding: 160px 0 110px;
+      }
+    }
+    .hero-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, rgba(30, 16, 5, 0.8) 0%, rgba(47, 27, 7, 0.9) 100%);
+      z-index: 1;
+    }
+    .hero-content {
+      position: relative;
+      z-index: 2;
+    }
+    .hero-badge {
+      background-color: rgba(201, 162, 75, 0.25);
+      color: #F8E7C0;
+      border: 1px solid rgba(201, 162, 75, 0.5);
+      font-size: 0.8rem;
+      letter-spacing: 1px;
+    }
+    .hero-img-container {
+      position: relative;
+    }
+    .hero-img-container::before {
+      content: '';
+      position: absolute;
+      inset: -10px;
+      border: 2px solid var(--color-gold);
+      border-radius: 20px;
+      z-index: 0;
+      transform: rotate(2deg);
+      opacity: 0.7;
+    }
+    .hero-img {
+      position: relative;
+      z-index: 1;
+      border-radius: 16px;
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+    }
+
+    .card-servicio {
+      background: var(--card-bg);
+      border: 1px solid rgba(201, 162, 75, 0.15);
+      border-radius: 16px;
+      transition: var(--transition-smooth);
+      overflow: hidden;
+      box-shadow: 0 5px 20px rgba(74, 44, 11, 0.04);
+    }
+    .card-servicio:hover {
+      transform: translateY(-6px);
+      border-color: var(--color-gold);
+      box-shadow: 0 15px 35px rgba(201, 162, 75, 0.18);
+    }
+    .card-img-top {
+      height: 200px;
+      object-fit: cover;
+      transition: transform 0.6s ease;
+    }
+    @media (min-width: 768px) {
+      .card-img-top {
+        height: 220px;
+      }
+    }
+    .card-servicio:hover .card-img-top {
+      transform: scale(1.06);
+    }
+    .badge-categoria {
+      background-color: var(--bg-base);
+      color: var(--text-main);
+      font-size: 0.75rem;
+      letter-spacing: 0.5px;
+    }
+
+    .search-box {
+      border: 1px solid rgba(201, 162, 75, 0.3);
+      border-radius: 50px;
+      transition: var(--transition-smooth);
+      min-height: 50px;
+    }
+    .search-box:focus {
+      border-color: var(--color-gold);
+      box-shadow: 0 0 0 0.2rem rgba(201, 162, 75, 0.15);
+    }
+    
+    /* Horizontal touch scroll for category filters on mobile */
+    .filter-scroll-container {
+      display: flex;
+      overflow-x: auto;
+      gap: 0.5rem;
+      padding-bottom: 0.5rem;
+      scrollbar-width: none; /* Firefox */
+      -webkit-overflow-scrolling: touch;
+    }
+    .filter-scroll-container::-webkit-scrollbar {
+      display: none; /* Chrome/Safari */
+    }
+    .filter-btn {
+      background-color: #FFF;
+      color: var(--text-main);
+      font-weight: 500;
+      font-size: 0.85px;
+      padding: 0.55rem 1.1rem;
+      border: 1px solid rgba(201, 162, 75, 0.3);
+      border-radius: 50px;
+      white-space: nowrap;
+      transition: var(--transition-smooth);
+      min-height: 44px;
+    }
+    .filter-btn.active, .filter-btn:hover {
+      background-color: var(--text-main);
+      color: #FFF;
+      border-color: var(--text-main);
+    }
+
+    .about-section {
+      background: linear-gradient(135deg, #EFECE6 0%, #FAF8F5 100%);
+      border-top: 1px solid rgba(201, 162, 75, 0.2);
+      border-bottom: 1px solid rgba(201, 162, 75, 0.2);
+    }
+    .feature-card {
+      background: #FFF;
+      border-radius: 12px;
+      padding: 1.75rem;
+      border: 1px solid rgba(201, 162, 75, 0.15);
+      transition: var(--transition-smooth);
+    }
+    .feature-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 10px 25px rgba(201, 162, 75, 0.12);
+    }
+    .feature-icon {
+      width: 55px;
+      height: 55px;
+      background-color: rgba(201, 162, 75, 0.12);
+      color: var(--color-gold);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      font-size: 1.35rem;
+      margin-bottom: 1rem;
+    }
+
+    .gallery-img {
+      border-radius: 14px;
+      overflow: hidden;
+      position: relative;
+      box-shadow: 0 8px 20px rgba(74, 44, 11, 0.08);
+    }
+    .gallery-img img {
+      width: 100%;
+      height: 240px;
+      object-fit: cover;
+      transition: transform 0.5s ease;
+    }
+    @media (min-width: 768px) {
+      .gallery-img img {
+        height: 280px;
+      }
+    }
+    .gallery-img:hover img {
+      transform: scale(1.05);
+    }
+    .gallery-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top, rgba(74,44,11,0.85), transparent);
+      opacity: 0.9;
+      @media (min-width: 768px) { opacity: 0; }
+      transition: opacity 0.3s ease;
+      display: flex;
+      align-items: flex-end;
+      padding: 1.25rem;
+      color: #FFF;
+    }
+    .gallery-img:hover .gallery-overlay {
+      opacity: 1;
+    }
+
+    footer {
+      background-color: #2F1B07;
+      color: #EFECE6;
+    }
+    
+    /* WhatsApp Floating Button with Animation */
+    .whatsapp-float {
+      position: fixed;
+      bottom: 85px;
+      right: 20px;
+      background-color: #25d366;
+      color: #FFF;
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 32px;
+      box-shadow: 0 6px 20px rgba(37, 211, 102, 0.4);
+      z-index: 1040;
+      animation: pulse-zoom 2.2s infinite ease-in-out;
+      transition: var(--transition-smooth);
+    }
+    @media (min-width: 992px) {
+      .whatsapp-float {
+        bottom: 30px;
+        right: 30px;
+      }
+    }
+    .whatsapp-float:hover {
+      animation: none;
+      transform: scale(1.12);
+      color: #FFF;
+      background-color: #20ba5a;
+    }
+
+    /* Mobile Sticky Action Bar */
+    .mobile-sticky-bar {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: rgba(255, 255, 255, 0.96);
+      backdrop-filter: blur(10px);
+      border-top: 1px solid rgba(201, 162, 75, 0.25);
+      padding: 10px 16px;
+      z-index: 1045;
+      display: flex;
+      gap: 10px;
+      box-shadow: 0 -4px 15px rgba(74, 44, 11, 0.08);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-lg fixed-top navbar-glow py-2">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center" href="#">
+        <img src="https://i.imgur.com/mj0HJB0.png" alt="Glow Beauty Logo" class="navbar-brand-logo me-2" loading="eager">
+      </a>
+      <button class="navbar-toggler border-0 shadow-none p-2" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-label="Toggle navigation">
+        <i class="fa-solid fa-bars text-dark fs-3"></i>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav align-items-lg-center gap-lg-3 mt-3 mt-lg-0">
+          <li class="nav-item"><a class="nav-link" href="#inicio">Inicio</a></li>
+          <li class="nav-item"><a class="nav-link" href="#servicios">Servicios</a></li>
+          <li class="nav-item"><a class="nav-link" href="#michelle">Michelle Pinos</a></li>
+          <li class="nav-item"><a class="nav-link" href="#instalaciones">Instalaciones</a></li>
+          <li class="nav-item"><a class="nav-link" href="#ubicacion">Ubicación</a></li>
+          <li class="nav-item ms-lg-2 mt-2 mt-lg-0">
+            <button class="btn btn-glow w-100 w-lg-auto px-4 py-2" data-bs-toggle="modal" data-bs-target="#reservaModal" data-servicio="Valoración y Cita General">Agendar Cita</button>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO SECTION -->
+  <header id="inicio" class="hero-section d-flex align-items-center">
+    <div class="hero-overlay"></div>
+    <div class="container py-4 py-lg-5 hero-content">
+      <div class="row align-items-center g-4 g-lg-5">
+        <div class="col-lg-7 text-center text-lg-start">
+          <span class="badge hero-badge rounded-pill px-3 py-2 text-uppercase fw-semibold mb-3">Centro estético y spa profesional · Cuenca</span>
+          <h1 class="display-4 display-lg-3 fw-bold font-serif mb-3 mb-lg-4 text-white">Tu piel, tu mejor versión.</h1>
+          <p class="lead mb-4 text-light opacity-90 fs-6 fs-lg-5">Tratamientos faciales, láser y estética avanzada con valoración personalizada, en un espacio pensado para que te relajes y te sientas cuidada.</p>
+          <div class="d-flex flex-column flex-sm-row gap-3 justify-content-center justify-content-lg-start mb-4">
+            <a href="https://wa.me/593983957367?text=Hola!%20Quisiera%20agendar%20una%20cita%20en%20Glow%20Beauty." target="_blank" rel="noopener noreferrer" class="btn btn-glow btn-whatsapp-animated px-4 py-3 shadow-lg">
+              <i class="fa-brands fa-whatsapp fs-5 me-2"></i> Agendar por WhatsApp
+            </a>
+            <a href="#servicios" class="btn btn-outline-glow px-4 py-3">Ver servicios</a>
+          </div>
+          <div class="row text-start g-3 pt-3 border-top border-warning border-opacity-25 text-white">
+            <div class="col-4">
+              <span class="d-block fw-bold fs-5">5 años</span>
+              <small class="text-white-50">Experiencia</small>
+            </div>
+            <div class="col-4">
+              <span class="d-block fw-bold fs-5">100%</span>
+              <small class="text-white-50">Personalizado</small>
+            </div>
+            <div class="col-4">
+              <span class="d-block fw-bold fs-5">Aparatología</span>
+              <small class="text-white-50">Avanzada</small>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-5 d-none d-lg-block">
+          <div class="hero-img-container">
+            <img src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?q=80&w=800&auto=format&fit=crop" alt="Spa Facial Glow Beauty" class="img-fluid hero-img w-100" loading="lazy">
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- POR QUÉ GLOW BEAUTY -->
+  <section class="py-5 bg-white">
+    <div class="container py-3">
+      <div class="text-center mb-5">
+        <h2 class="font-serif fw-bold h2 h1-lg">Cuidado profesional, trato cercano</h2>
+        <div class="mx-auto mt-2" style="width: 50px; height: 3px; background-color: var(--color-gold);"></div>
+      </div>
+      <div class="row g-4">
+        <div class="col-md-6 col-lg-3">
+          <div class="feature-card h-100 text-center text-md-start">
+            <div class="feature-icon mx-auto mx-md-0"><i class="fa-solid fa-face-smile"></i></div>
+            <h3 class="h5 fw-bold font-serif mb-2">Valoración personalizada</h3>
+            <p class="text-muted small mb-0">Cada tratamiento empieza con una evaluación de tu piel para elegir lo que realmente necesitas.</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3">
+          <div class="feature-card h-100 text-center text-md-start">
+            <div class="feature-icon mx-auto mx-md-0"><i class="fa-solid fa-microchip"></i></div>
+            <h3 class="h5 fw-bold font-serif mb-2">Tecnología profesional</h3>
+            <p class="text-muted small mb-0">Láser, radiofrecuencia, luz LED, microneedling y aparatología avanzada aplicada por especialista.</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3">
+          <div class="feature-card h-100 text-center text-md-start">
+            <div class="feature-icon mx-auto mx-md-0"><i class="fa-solid fa-mug-hot"></i></div>
+            <h3 class="h5 fw-bold font-serif mb-2">Experiencia spa</h3>
+            <p class="text-muted small mb-0">Disfruta de té, café, galletas y tu música favorita durante toda tu sesión de bienestar.</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3">
+          <div class="feature-card h-100 text-center text-md-start">
+            <div class="feature-icon mx-auto mx-md-0"><i class="fa-solid fa-gift"></i></div>
+            <h3 class="h5 fw-bold font-serif mb-2">Te premiamos</h3>
+            <p class="text-muted small mb-0">Tarjetas de fidelización con descuentos y regalos, y gift cards ideales para obsequiar a esa persona especial.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECCIÓN SERVICIOS -->
+  <section id="servicios" class="py-5" style="background-color: #FAF8F5;">
+    <div class="container py-3">
+      <div class="text-center mb-5">
+        <span class="text-uppercase text-muted small tracking-widest fw-bold">Catálogo Oficial</span>
+        <h2 class="font-serif fw-bold h2 h1-lg mt-1">Nuestros Tratamientos</h2>
+        <p class="text-muted px-2">Elige tu tratamiento y agenda por WhatsApp. En todos realizamos una valoración personalizada.</p>
+        <div class="mx-auto mt-2" style="width: 50px; height: 3px; background-color: var(--color-gold);"></div>
+      </div>
+
+      <!-- Buscador y Filtros -->
+      <div class="row justify-content-center mb-5">
+        <div class="col-lg-8">
+          <div class="input-group mb-3 shadow-sm">
+            <span class="input-group-text bg-white border-end-0 ps-4 text-muted"><i class="fa-solid fa-search"></i></span>
+            <input type="text" id="buscadorServicios" class="form-control form-control-lg border-start-0 search-box ps-2 fs-6" placeholder="Buscar tratamiento (ej. limpieza, láser)..." aria-label="Buscar tratamiento">
+          </div>
+          <!-- Contenedor con scroll horizontal táctil para móviles -->
+          <div class="filter-scroll-container px-1" id="filtroCategorias">
+            <button class="filter-btn active" data-filter="todos">Todos</button>
+            <button class="filter-btn" data-filter="faciales">Faciales</button>
+            <button class="filter-btn" data-filter="regenerativos">Regenerativos</button>
+            <button class="filter-btn" data-filter="laser-facial">Láser facial</button>
+            <button class="filter-btn" data-filter="otros-faciales">Otros faciales</button>
+            <button class="filter-btn" data-filter="laser-corporal">Láser corporal</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Aviso faciales -->
+      <div class="alert alert-warning border-0 shadow-sm p-3 rounded-4 mb-5 text-center small mx-auto" style="max-width: 800px; background-color: rgba(201, 162, 75, 0.1); color: var(--text-main);">
+        <i class="fa-solid fa-circle-info text-warning me-2"></i> <strong>Nota en faciales:</strong> Incluyen masaje relajante de hombros, escote, rostro y brazos (duración de 1h 30m a 2 horas).
+      </div>
+
+      <!-- Grid de Servicios -->
+      <div class="row g-4" id="contenedorServicios">
+
+        <!-- FACIALES -->
+        <div class="col-md-6 col-lg-4 item-servicio" data-categoria="faciales">
+          <div class="card card-servicio h-100">
+            <img src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?q=80&w=600&auto=format&fit=crop" class="card-img-top" alt="Limpieza facial profunda" loading="lazy">
+            <div class="card-body p-4 d-flex flex-column">
+              <div class="d-flex justify-content-between align-items-center mb-2">
+                <span class="badge badge-categoria px-2 py-1 rounded-pill text-uppercase">Facial</span>
+              </div>
+              <h3 class="h5 font-serif fw-bold mb-2">Limpieza facial profunda</h3>
+              <p class="text-muted small flex-grow-1">Elimina impurezas, puntos negros y exceso de grasa. Ayuda a prevenir el acné y el envejecimiento prematuro.</p>
+              <button class="btn btn-glow w-100 mt-3 py-2 btn-reservar" data-bs-toggle="modal" data-bs-target="#reservaModal" data-servicio="Limpieza facial profunda">Consultar / Reservar</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4 item-servicio" data-categoria="faciales">
+          <div class="card card-servicio h-100">
+            <img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?q=80&w=600&auto=format&fit=crop" class="card-img-top" alt="Dermopulido" loading="lazy">
+            <div class="card-body p-4 d-flex flex-column">
+              <div class="d-flex justify-content-between align-items-center mb-2">
+                <span class="badge badge-categoria px-2 py-1 rounded-pill text-uppercase">Facial</span>
+              </div>
+              <h3 class="h5 font-serif fw-bold mb-2">Dermopulido</h3>
+              <p class="text-muted small flex-grow-1">Pulido con microcristales que mejora la textura, refina los poros, atenúa cicatrices y aclara tu piel.</p>
+              <button class="btn btn-glow w-100 mt-3 py-2 btn-reservar" data-bs-toggle="modal" data-bs-target="#reservaModal" data-servicio="Dermopulido">Consultar / Reservar</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4 item-servicio" data-categoria="faciales">
+          <div class="card card-servicio h-100">
+            <img src="https://images.unsplash.com/photo-1614859324967-bdf461fcf769?q=80&w=600&auto=format&fit=crop" class="card-img-top" alt="Cromoterapia" loading="lazy">
+            <div class="card-body p-4 d-flex flex-column">
+              <div class="d-flex justify-content-between align-items-center mb-2">
+                <span class="badge badge-categoria px-2 py-1 rounded-pill text-uppercase">Facial</span>
+              </div>
+              <h3 class="h5 font-serif fw-bold mb-2">Cromoterapia</h3>
+              <p class="text-muted small flex-grow-1">Luz LED de distintos colores que estimula la regeneración celular y mejora el aspecto de la piel.</p>
+              <button class="btn btn-glow w-100 mt-3 py-2 btn-reservar" data-bs-toggle="modal" data-bs-target="#reservaModal" data-servicio="Cromoterapia">Consultar / Reservar</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4 item-servicio" data-categoria="faciales">
+          <div class="card card-servicio h-100">
+            <img src="https://images.unsplash.com/photo-1599847292164-8502dd2c4b8b?q=80&w=600&auto=format&fit=crop" class="card-img-top" alt="Dermaplaning" loading="lazy">
+            <div class="card-body p-4 d-flex flex-column">
+              <div class="d-flex justify-content-between align-items-center mb-2">
+                <span class="badge badge-categoria px-2 py-1 rounded-pill text-uppercase">Facial</span>
+              </div>
+              <h3 class="h5 font-serif fw-bold mb-2">Dermaplaning</h3>
+              <p class="text-muted small flex-grow-1">Exfoliación suave que retira la capa superficial para una piel luminosa, libre de suciedad y con apariencia juvenil.</p>
+              <button class="btn btn-glow w-100 mt-3 py-2 btn-reservar" data-bs-toggle="modal" data-bs-target="#reservaModal" data-servicio="Dermaplaning">Consultar / Reservar</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4 item-servicio" data-categoria="faciales">
+          <div class="card card-servicio h-100">
+            <img src="https://images.unsplash.com/photo-1519699047748-de8e457a634e?q=80&w=600&auto=format&fit=crop" class="card-img-top" alt="Facial lift" loading="lazy">
+            <div class="card-body p-4 d-flex flex-column">
+              <div class="d-flex justify-content-between align-items-center mb-2">
+                <span class="badge badge-categoria px-2 py-1 rounded-pill text-uppercase">Facial</span>
+              </div>
+              <h3 class="h5 font-serif fw-bold mb-2">Facial lift</h3>
+              <p class="text-muted small flex-grow-1">Tratamiento con radiofrecuencia ideal para tratar líneas de expresión, flacidez y arrugas.</p>
+              <button class="btn btn-glow w-100 mt-3 py-2 btn-reservar" data-bs-toggle="modal" data-bs-target="#reservaModal" data-servicio="Facial lift">Consultar / Reservar</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4 item-servicio" data-categoria="faciales">
+          <div class="card card-servicio h-100">
+            <img src="https://images.unsplash.com/photo-1607006342411-9a3263e6fa3a?q=80&w=600&auto=format&fit=crop" class="card-img-top" alt="Facial piel sensible" loading="lazy">
+            <div class="card-body p-4 d-flex flex-column">
+              <div class="d-flex justify-content-between align-items-center mb-2">
+                <span class="badge badge-categoria px-2 py-1 rounded-pill text-uppercase">Facial</span>
+              </div>
+              <h3 class="h5 font-serif fw-bold mb-2">Facial piel sensible</h3>
+              <p class="text-muted small flex-grow-1">Nutre y refresca tu piel utilizando tecnología infrarrojo y activos descongestivos para la disminución de rojeces.</p>
+              <button class="btn btn-glow w-100 mt-3 py-2 btn-reservar" data-bs-toggle="modal" data-bs-target="#reservaModal" data-servicio="Facial piel sensible">Consultar / Reservar</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4 item-servicio" data-categoria="faciales">
+          <div class="card card-servicio h-100">
+            <img src="https://images.unsplash.com/photo-1583001809274-180a1e93be0d?q=80&w=600&auto=format&fit=crop" class="card-img-top" alt="Peeling ultrasónico" loading="lazy">
+            <div class="card-body p-4 d-flex flex-column">
+              <div class="d-flex justify-content-between align-items-center mb-2">
+                <span class="badge badge-categoria px-2 py-1 rounded-pill text-uppercase">Facial</span>
+              </div>
+              <h3 class="h5 font-serif fw-bold mb-2">Peeling ultrasónico</h3>
+              <p class="text-muted small flex-grow-1">Oxigena y regenera la piel, mejora la elasticidad y favorece la absorción de productos cosméticos.</p>
+              <button class="btn btn-glow w-100 mt-3 py-2 btn-reservar" data-bs-toggle="modal" data-bs-target="#reservaModal" data-servicio="Peeling ultrasónico">Consultar / Reservar</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4 item-servicio" data-categoria="faciales">
+          <div class="card card-servicio h-100">
+            <img src="https://images.unsplash.com/photo-1595853035070-59a39fe84de3?q=80&w=600&auto=format&fit=crop" class="card-img-top" alt="Corriente galvánica" loading="lazy">
+            <div class="card-body p-4 d-flex flex-column">
+              <div class="d-flex justify-content-between align-items-center mb-2">
+                <span class="badge badge-categoria px-2 py-1 rounded-pill text-uppercase">Facial</span>
+              </div>
+              <h3 class="h5 font-serif fw-bold mb-2">Corriente galvánica</h3>
+              <p class="text-muted small flex-grow-1">Utiliza polos positivos y negativos para penetrar la dermis y estimular los músculos faciales.</p>
+              <button class="btn btn-glow w-100 mt-3 py-2 btn-reservar" data-bs-toggle="modal" data-bs-target="#reservaModal" data-servicio="Corriente galvánica">Consultar / Reservar</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4 item-servicio" data-categoria="faciales">
+          <div class="card card-servicio h-100">
+            <img src="https://images.unsplash.com/photo-1621184455862-c163dfb30e0f?q=80&w=600&auto=format&fit=crop" class="card-img-top" alt="Microneedling" loading="lazy">
+            <div class="card-body p-4 d-flex flex-column">
+              <div class="d-flex justify-content-between align-items-center mb-2">
+                <span class="badge badge-categoria px-2 py-1 rounded-pill text-uppercase">Facial</span>
+              </div>
+              <h3 class="h5 font-serif fw-bold mb-2">Microneedling</h3>
+              <p class="text-muted small flex-grow-1">Tratamiento no invasivo y prácticamente indoloro que mejora arrugas, cicatrices de acné, manchas y estrías.</p>
+              <button class="btn btn-glow w-100 mt-3 py-2 btn-reservar" data-bs-toggle="modal" data-bs-target="#reservaModal" data-servicio="Microneedling">Consultar / Reservar</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4 item-servicio" data-categoria="faciales">
+          <div class="card card-servicio h-100">
+            <img src="https://images.unsplash.com/photo-1560617544-b4f287e85e44?q=80&w=600&auto=format&fit=crop" class="card-img-top" alt="Peeling facial" loading="lazy">
+            <div class="card-body p-4 d-flex flex-column">
+              <div class="d-flex justify-content-between align-items-center mb-2">
+                <span class="badge badge-categoria px-2 py-1 rounded-pill text-uppercase">Facial</span>
+              </div>
+              <h3 class="h5 font-serif fw-bold mb-2">Peeling facial</h3>
+              <p class="text-muted small flex-grow-1">Elimina células muertas y capas superficiales, reduciendo manchas, arrugas finas y promoviendo un cutis luminoso.</p>
+              <button class="btn btn-glow w-100 mt-3 py-2 btn-reservar" data-bs-toggle="modal" data-bs-target="#reservaModal" data-servicio="Peeling facial">Consultar / Reservar</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4 item-servicio" data-categoria="faciales">
+          <div class="card card-servicio h-100">
+            <img src="https://images.unsplash.com/photo-1515377905703-c4788e51af15?q=80&w=600&auto=format&fit=crop" class="card-img-top" alt="Ultrasonido" loading="lazy">
+            <div class="card-body p-4 d-flex flex-column">
+              <div class="d-flex justify-content-between align-items-center mb-2">
+                <span class="badge badge-categoria px-2 py-1 rounded-pill text-uppercase">Facial</span>
+              </div>
+              <h3 class="h5 font-serif fw-bold mb-2">Ultrasonido</h3>
+              <p class="text-muted small flex-grow-1">Utiliza ondas sonoras de alta frecuencia para rejuvenecer la piel, estimulando el colágeno y reafirmando tejidos.</p>
+              <button class="btn btn-glow w-100 mt-3 py-2 btn-reservar" data-bs-toggle="modal" data-bs-target="#reservaModal" data-servicio="Ultrasonido">Consultar / Reservar</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4 item-servicio" data-categoria="faciales">
+          <div class="card card-servicio h-100">
+            <img src="https://images.unsplash.com/photo-1512290923902-8a9f81dc236c?q=80&w=600&auto=format&fit=crop" class="card-img-top" alt="Electroestimulación" loading="lazy">
+            <div class="card-body p-4 d-flex flex-column">
+              <div class="d-flex justify-content-between align-items-center mb-2">
+                <span class="badge badge-categoria px-2 py-1 rounded-pill text-uppercase">Facial</span>
+              </div>
+              <h3 class="h5 font-serif fw-bold mb-2">Electroestimulación</h3>
+              <p class="text-muted small flex-grow-1">Actúa como gimnasio facial, tonificando la musculatura, reduciendo flacidez y ofreciendo un efecto lifting sin cirugía.</p>
+              <button class="btn btn-glow w-100 mt-3 py-2 btn-reservar" data-bs-toggle="modal" data-bs-target="#reservaModal" data-servicio="Electroestimulación">Consultar / Reservar</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- REGENERATIVOS -->
+        <div class="col-md-6 col-lg-4 item-servicio" data-categoria="regenerativos">
+          <div class="card card-servicio h-100">
+            <img src="https://images.unsplash.com/photo-1605497746444-1ae0d33b3d57?q=80&w=600&auto=format&fit=crop" class="card-img-top" alt="PDRN de salmón" loading="lazy">
+            <div class="card-body p-4 d-flex flex-column">
+              <div class="d-flex justify-content-between align-items-center mb-2">
+                <span class="badge badge-categoria px-2 py-1 rounded-pill text-uppercase" style="background-color: #E2D9C5;">Regenerativo</span>
+              </div>
+              <h3 class="h5 font-serif fw-bold mb-2">PDRN de salmón</h3>
+              <p class="text-muted small flex-grow-1">Regenerador celular derivado del ADN de salmón usado por sus propiedades antiedad, antiinflamatorias y cicatrizantes.</p>
+              <button class="btn btn-glow w-100 mt-3 py-2 btn-reservar" data-bs-toggle="modal" data-bs-target="#reservaModal" data-servicio="PDRN de salmón">Consultar / Reservar</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4 item-servicio" data-categoria="regenerativos">
+          <div class="card card-servicio h-100">
+            <img src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?q=80&w=600&auto=format&fit=crop" class="card-img-top" alt="Exosomas" loading="lazy">
+            <div class="card-body p-4 d-flex flex-column">
+              <div class="d-flex justify-content-between align-items-center mb-2">
+                <span class="badge badge-categoria px-2 py-1 rounded-pill text-uppercase" style="background-color: #E2D9C5;">Regenerativo</span>
+              </div>
+              <h3 class="h5 font-serif fw-bold mb-2">Exosomas</h3>
+              <p class="text-muted small flex-grow-1">Vesículas extracelulares derivadas de células madre, ricas en factores de crecimiento para regenerar y revitalizar la piel.</p>
+              <button class="btn btn-glow w-100 mt-3 py-2 btn-reservar" data-bs-toggle="modal" data-bs-target="#reservaModal" data-servicio="Exosomas">Consultar / Reservar</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4 item-servicio" data-categoria="regenerativos">
+          <div class="card card-servicio h-100">
+            <img src="https://images.unsplash.com/photo-1522337094846-8a811135226c?q=80&w=600&auto=format&fit=crop" class="card-img-top" alt="Mesoterapia virtual" loading="lazy">
+            <div class="card-body p-4 d-flex flex-column">
+              <div class="d-flex justify-content-between align-items-center mb-2">
+                <span class="badge badge-categoria px-2 py-1 rounded-pill text-uppercase" style="background-color: #E2D9C5;">Regenerativo</span>
+              </div>
+              <h3 class="h5 font-serif fw-bold mb-2">Mesoterapia virtual</h3>
+              <p class="text-muted small flex-grow-1">Impulsos eléctricos suaves para facilitar la penetración profunda de ácido hialurónico y vitaminas sin agujas.</p>
+              <button class="btn btn-glow w-100 mt-3 py-2 btn-reservar" data-bs-toggle="modal" data-bs-target="#reservaModal" data-servicio="Mesoterapia virtual">Consultar / Reservar</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- LÁSER FACIAL -->
+        <div class="col-md-6 col-lg-4 item-servicio" data-categoria="laser-facial">
+          <div class="card card-servicio h-100">
+            <img src="https://images.unsplash.com/photo-1519699047748-de8e457a634e?q=80&w=600&auto=format&fit=crop" class="card-img-top" alt="Láser semifraccionado" loading="lazy">
+            <div class="card-body p-4 d-flex flex-column">
+              <div class="d-flex justify-content-between align-items-center mb-2">
+                <span class="badge badge-categoria px-2 py-1 rounded-pill text-uppercase bg-dark text-white">Láser Facial</span>
+              </div>
+              <h3 class="h5 font-serif fw-bold mb-2">Láser semifraccionado</h3>
+              <p class="text-muted small flex-grow-1">Rejuvenecimiento profundo: mejora arrugas, cicatrices de acné, manchas y flacidez al estimular colágeno.</p>
+              <button class="btn btn-glow w-100 mt-3 py-2 btn-reservar" data-bs-toggle="modal" data-bs-target="#reservaModal" data-servicio="Láser semifraccionado">Consultar / Reservar</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4 item-servicio" data-categoria="laser-facial">
+          <div class="card card-servicio h-100">
+            <img src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?q=80&w=600&auto=format&fit=crop" class="card-img-top" alt="Láser despigmentante" loading="lazy">
+            <div class="card-body p-4 d-flex flex-column">
+              <div class="d-flex justify-content-between align-items-center mb-2">
+                <span class="badge badge-categoria px-2 py-1 rounded-pill text-uppercase bg-dark text-white">Láser Facial</span>
+              </div>
+              <h3 class="h5 font-serif fw-bold mb-2">Láser despigmentante</h3>
+              <p class="text-muted small flex-grow-1">Procedimiento no invasivo con energía lumínica para romper exceso de melanina, eliminando manchas solares y melasma.</p>
+              <button class="btn btn-glow w-100 mt-3 py-2 btn-reservar" data-bs-toggle="modal" data-bs-target="#reservaModal" data-servicio="Láser despigmentante">Consultar / Reservar</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4 item-servicio" data-categoria="laser-facial">
+          <div class="card card-servicio h-100">
+            <img src="https://images.unsplash.com/photo-1583001809274-180a1e93be0d?q=80&w=600&auto=format&fit=crop" class="card-img-top" alt="Hollywood peeling" loading="lazy">
+            <div class="card-body p-4 d-flex flex-column">
+              <div class="d-flex justify-content-between align-items-center mb-2">
+                <span class="badge badge-categoria px-2 py-1 rounded-pill text-uppercase bg-dark text-white">Láser Facial</span>
+              </div>
+              <h3 class="h5 font-serif fw-bold mb-2">Hollywood peeling</h3>
+              <p class="text-muted small flex-grow-1">Si amas la piel glowy, este es tu tratamiento perfecto. Resultados visibles desde la primera sesión.</p>
+              <button class="btn btn-glow w-100 mt-3 py-2 btn-reservar" data-bs-toggle="modal" data-bs-target="#reservaModal" data-servicio="Hollywood peeling">Consultar / Reservar</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4 item-servicio" data-categoria="laser-facial">
+          <div class="card card-servicio h-100">
+            <img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?q=80&w=600&auto=format&fit=crop" class="card-img-top" alt="Láser acné" loading="lazy">
+            <div class="card-body p-4 d-flex flex-column">
+              <div class="d-flex justify-content-between align-items-center mb-2">
+                <span class="badge badge-categoria px-2 py-1 rounded-pill text-uppercase bg-dark text-white">Láser Facial</span>
+              </div>
+              <h3 class="h5 font-serif fw-bold mb-2">Láser acné</h3>
+              <p class="text-muted small flex-grow-1">Utiliza energía lumínica para reducir la inflamación, disminuir la producción de sebo y eliminar bacterias.</p>
+              <button class="btn btn-glow w-100 mt-3 py-2 btn-reservar" data-bs-toggle="modal" data-bs-target="#reservaModal" data-servicio="Láser acné">Consultar / Reservar</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4 item-servicio" data-categoria="laser-facial">
+          <div class="card card-servicio h-100">
+            <img src="https://images.unsplash.com/photo-1595853035070-59a39fe84de3?q=80&w=600&auto=format&fit=crop" class="card-img-top" alt="Láser vascular" loading="lazy">
+            <div class="card-body p-4 d-flex flex-column">
+              <div class="d-flex justify-content-between align-items-center mb-2">
+                <span class="badge badge-categoria px-2 py-1 rounded-pill text-uppercase bg-dark text-white">Láser Facial</span>
+              </div>
+              <h3 class="h5 font-serif fw-bold mb-2">Láser vascular</h3>
+              <p class="text-muted small flex-grow-1">Utiliza haces de luz precisos para eliminar lesiones vasculares, arañas vasculares, rosácea y puntos rubí.</p>
+              <button class="btn btn-glow w-100 mt-3 py-2 btn-reservar" data-bs-toggle="modal" data-bs-target="#reservaModal" data-servicio="Láser vascular">Consultar / Reservar</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4 item-servicio" data-categoria="laser-facial">
+          <div class="card card-servicio h-100">
+            <img src="https://images.unsplash.com/photo-1614859324967-bdf461fcf769?q=80&w=600&auto=format&fit=crop" class="card-img-top" alt="Láser de rejuvenecimiento" loading="lazy">
+            <div class="card-body p-4 d-flex flex-column">
+              <div class="d-flex justify-content-between align-items-center mb-2">
+                <span class="badge badge-categoria px-2 py-1 rounded-pill text-uppercase bg-dark text-white">Láser Facial</span>
+              </div>
+              <h3 class="h5 font-serif fw-bold mb-2">Láser de rejuvenecimiento</h3>
+              <p class="text-muted small flex-grow-1">Estimula la producción de colágeno y elastina, mejorando textura, firmeza, arrugas y manchas.</p>
+              <button class="btn btn-glow w-100 mt-3 py-2 btn-reservar" data-bs-toggle="modal" data-bs-target="#reservaModal" data-servicio="Láser de rejuvenecimiento">Consultar / Reservar</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- OTROS FACIALES -->
+        <div class="col-md-6 col-lg-4 item-servicio" data-categoria="otros-faciales">
+          <div class="card card-servicio h-100">
+            <img src="https://images.unsplash.com/photo-1515377905703-c4788e51af15?q=80&w=600&auto=format&fit=crop" class="card-img-top" alt="Drenaje linfático facial" loading="lazy">
+            <div class="card-body p-4 d-flex flex-column">
+              <div class="d-flex justify-content-between align-items-center mb-2">
+                <span class="badge badge-categoria px-2 py-1 rounded-pill text-uppercase" style="background-color: #E2D9C5;">Especial</span>
+              </div>
+              <h3 class="h5 font-serif fw-bold mb-2">Drenaje linfático facial</h3>
+              <p class="text-muted small flex-grow-1">Masaje manual suave que estimula la linfa, reduciendo retención de líquidos, bolsas y ojeras.</p>
+              <button class="btn btn-glow w-100 mt-3 py-2 btn-reservar" data-bs-toggle="modal" data-bs-target="#reservaModal" data-servicio="Drenaje linfático facial">Consultar / Reservar</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4 item-servicio" data-categoria="otros-faciales">
+          <div class="card card-servicio h-100">
+            <img src="https://images.unsplash.com/photo-1621184455862-c163dfb30e0f?q=80&w=600&auto=format&fit=crop" class="card-img-top" alt="Carboxiterapia facial" loading="lazy">
+            <div class="card-body p-4 d-flex flex-column">
+              <div class="d-flex justify-content-between align-items-center mb-2">
+                <span class="badge badge-categoria px-2 py-1 rounded-pill text-uppercase" style="background-color: #E2D9C5;">Especial</span>
+              </div>
+              <h3 class="h5 font-serif fw-bold mb-2">Carboxiterapia facial</h3>
+              <p class="text-muted small flex-grow-1">Microinyecciones de dióxido de carbono para oxigenar la piel y estimular colágeno y elastina.</p>
+              <button class="btn btn-glow w-100 mt-3 py-2 btn-reservar" data-bs-toggle="modal" data-bs-target="#reservaModal" data-servicio="Carboxiterapia facial">Consultar / Reservar</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4 item-servicio" data-categoria="otros-faciales">
+          <div class="card card-servicio h-100">
+            <img src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?q=80&w=600&auto=format&fit=crop" class="card-img-top" alt="Endolifting facial" loading="lazy">
+            <div class="card-body p-4 d-flex flex-column">
+              <div class="d-flex justify-content-between align-items-center mb-2">
+                <span class="badge badge-categoria px-2 py-1 rounded-pill text-uppercase" style="background-color: #E2D9C5;">Especial</span>
+              </div>
+              <h3 class="h5 font-serif fw-bold mb-2">Endolifting facial</h3>
+              <p class="text-muted small flex-grow-1">Láser con fibra óptica para retraer la piel, eliminar grasa localizada (pómulos, papada y cuello) y estimular colágeno.</p>
+              <button class="btn btn-glow w-100 mt-3 py-2 btn-reservar" data-bs-toggle="modal" data-bs-target="#reservaModal" data-servicio="Endolifting facial">Consultar / Reservar</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4 item-servicio" data-categoria="otros-faciales">
+          <div class="card card-servicio h-100">
+            <img src="https://images.unsplash.com/photo-1512290923902-8a9f81dc236c?q=80&w=600&auto=format&fit=crop" class="card-img-top" alt="Contorno de ojos" loading="lazy">
+            <div class="card-body p-4 d-flex flex-column">
+              <div class="d-flex justify-content-between align-items-center mb-2">
+                <span class="badge badge-categoria px-2 py-1 rounded-pill text-uppercase" style="background-color: #E2D9C5;">Especial</span>
+              </div>
+              <h3 class="h5 font-serif fw-bold mb-2">Contorno de ojos</h3>
+              <p class="text-muted small flex-grow-1">Masaje drenante y activos revitalizantes para reducir la inflamación y devolver luminosidad a tu mirada.</p>
+              <button class="btn btn-glow w-100 mt-3 py-2 btn-reservar" data-bs-toggle="modal" data-bs-target="#reservaModal" data-servicio="Contorno de ojos">Consultar / Reservar</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- LÁSER CORPORAL Y MÁS -->
+        <div class="col-md-6 col-lg-4 item-servicio" data-categoria="laser-corporal">
+          <div class="card card-servicio h-100">
+            <img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?q=80&w=600&auto=format&fit=crop" class="card-img-top" alt="Depilación definitiva" loading="lazy">
+            <div class="card-body p-4 d-flex flex-column">
+              <div class="d-flex justify-content-between align-items-center mb-2">
+                <span class="badge badge-categoria px-2 py-1 rounded-pill text-uppercase bg-secondary text-white">Corporal / Láser</span>
+              </div>
+              <h3 class="h5 font-serif fw-bold mb-2">Depilación definitiva</h3>
+              <p class="text-muted small flex-grow-1">Técnica con rayo de luz láser para eliminar el vello de las zonas no deseadas.</p>
+              <button class="btn btn-glow w-100 mt-3 py-2 btn-reservar" data-bs-toggle="modal" data-bs-target="#reservaModal" data-servicio="Depilación definitiva">Consultar / Reservar</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4 item-servicio" data-categoria="laser-corporal">
+          <div class="card card-servicio h-100">
+            <img src="https://images.unsplash.com/photo-1583001809274-180a1e93be0d?q=80&w=600&auto=format&fit=crop" class="card-img-top" alt="Eliminación de tatuajes" loading="lazy">
+            <div class="card-body p-4 d-flex flex-column">
+              <div class="d-flex justify-content-between align-items-center mb-2">
+                <span class="badge badge-categoria px-2 py-1 rounded-pill text-uppercase bg-secondary text-white">Corporal / Láser</span>
+              </div>
+              <h3 class="h5 font-serif fw-bold mb-2">Eliminación de tatuajes</h3>
+              <p class="text-muted small flex-grow-1">Láser de picosegundos, método efectivo para fragmentar la tinta y que el cuerpo la elimine vía linfática.</p>
+              <button class="btn btn-glow w-100 mt-3 py-2 btn-reservar" data-bs-toggle="modal" data-bs-target="#reservaModal" data-servicio="Eliminación de tatuajes">Consultar / Reservar</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4 item-servicio" data-categoria="laser-corporal">
+          <div class="card card-servicio h-100">
+            <img src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?q=80&w=600&auto=format&fit=crop" class="card-img-top" alt="Eliminación manchas" loading="lazy">
+            <div class="card-body p-4 d-flex flex-column">
+              <div class="d-flex justify-content-between align-items-center mb-2">
+                <span class="badge badge-categoria px-2 py-1 rounded-pill text-uppercase bg-secondary text-white">Corporal / Láser</span>
+              </div>
+              <h3 class="h5 font-serif fw-bold mb-2">Eliminación de manchas puntuales</h3>
+              <p class="text-muted small flex-grow-1">Utiliza energía lumínica para descomponer la melanina acumulada sin dañar la piel circundante.</p>
+              <button class="btn btn-glow w-100 mt-3 py-2 btn-reservar" data-bs-toggle="modal" data-bs-target="#reservaModal" data-servicio="Eliminación de manchas puntuales">Consultar / Reservar</button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="text-center mt-5 text-muted small px-3">
+        <p class="mb-0">Nuestros paquetes son personalizados. Escríbenos directamente para tu evaluación individualizada y presupuesto sin compromiso.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONOCE A MICHELLE PINOS -->
+  <section id="michelle" class="about-section py-5">
+    <div class="container py-3">
+      <div class="row align-items-center g-4 g-lg-5">
+        <div class="col-lg-5 text-center">
+          <div class="position-relative d-inline-block w-100">
+            <img src="https://i.imgur.com/l9abGKV.png" alt="Michelle Pinos Cosmiatra - Glow Beauty" class="img-fluid rounded-4 shadow-lg" style="max-height: 480px; width: 100%; object-fit: cover;" loading="lazy">
+          </div>
+        </div>
+        <div class="col-lg-7 text-center text-lg-start">
+          <span class="text-uppercase fw-bold small tracking-widest text-warning d-block mb-2">Cosmetóloga y cosmiatra</span>
+          <h2 class="font-serif fw-bold h2 h1-lg mb-3">Conoce a Michelle Pinos</h2>
+          <p class="lead text-muted mb-4 fs-6 fs-lg-5">Soy Michelle Pinos, especialista en estética con 5 años de trayectoria. Creé Glow Beauty para que cada persona encuentre aquí un tratamiento pensado exclusivamente para su piel, combinando atención cercana, calidez y tecnología profesional.</p>
+          <div class="row g-3 mb-4 justify-content-center justify-content-lg-start">
+            <div class="col-sm-4">
+              <div class="p-3 bg-white rounded-3 shadow-sm border border-warning border-opacity-25 text-center">
+                <i class="fa-solid fa-award text-warning fs-4 mb-1"></i>
+                <h3 class="h6 fw-bold small mb-0">5 años de experiencia</h3>
+              </div>
+            </div>
+            <div class="col-sm-4">
+              <div class="p-3 bg-white rounded-3 shadow-sm border border-warning border-opacity-25 text-center">
+                <i class="fa-solid fa-hand-holding-heart text-warning fs-4 mb-1"></i>
+                <h3 class="h6 fw-bold small mb-0">Valoración previa</h3>
+              </div>
+            </div>
+            <div class="col-sm-4">
+              <div class="p-3 bg-white rounded-3 shadow-sm border border-warning border-opacity-25 text-center">
+                <i class="fa-solid fa-user-check text-warning fs-4 mb-1"></i>
+                <h3 class="h6 fw-bold small mb-0">Atención directa</h3>
+              </div>
+            </div>
+          </div>
+          <button class="btn btn-glow px-4 py-3" data-bs-toggle="modal" data-bs-target="#reservaModal" data-servicio="Valoración Personalizada con Michelle">Agenda tu valoración</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- NUESTRO ESPACIO / INSTALACIONES -->
+  <section id="instalaciones" class="py-5 bg-white">
+    <div class="container py-3">
+      <div class="text-center mb-5">
+        <h2 class="font-serif fw-bold h2 h1-lg">Nuestro espacio</h2>
+        <p class="text-muted px-2">Un ambiente limpio, tranquilo y cómodo, pensado para tu relajación. ¡Te esperamos!</p>
+        <div class="mx-auto mt-2" style="width: 50px; height: 3px; background-color: var(--color-gold);"></div>
+      </div>
+      <div class="row g-3 g-md-4">
+        <div class="col-md-4">
+          <div class="gallery-img">
+            <img src="https://images.unsplash.com/photo-1519699047748-de8e457a634e?q=80&w=600&auto=format&fit=crop" alt="Recepción Glow Beauty" loading="lazy">
+            <div class="gallery-overlay"><h3 class="h6 mb-0 fw-bold font-serif text-white">Recepción</h3></div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="gallery-img">
+            <img src="https://images.unsplash.com/photo-1583001809274-180a1e93be0d?q=80&w=600&auto=format&fit=crop" alt="Cabina de tratamientos faciales" loading="lazy">
+            <div class="gallery-overlay"><h3 class="h6 mb-0 fw-bold font-serif text-white">Cabina de tratamientos faciales</h3></div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="gallery-img">
+            <img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?q=80&w=600&auto=format&fit=crop" alt="Cabina de tecnología y láser" loading="lazy">
+            <div class="gallery-overlay"><h3 class="h6 mb-0 fw-bold font-serif text-white">Cabina de tecnología y láser</h3></div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="gallery-img">
+            <img src="https://images.unsplash.com/photo-1512290923902-8a9f81dc236c?q=80&w=600&auto=format&fit=crop" alt="Cabina de relajación" loading="lazy">
+            <div class="gallery-overlay"><h3 class="h6 mb-0 fw-bold font-serif text-white">Cabina de relajación</h3></div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="gallery-img">
+            <img src="https://images.unsplash.com/photo-1614859324967-bdf461fcf769?q=80&w=600&auto=format&fit=crop" alt="Sala de tratamientos" loading="lazy">
+            <div class="gallery-overlay"><h3 class="h6 mb-0 fw-bold font-serif text-white">Sala de tratamientos</h3></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CÓMO AGENDAR & FAQ -->
+  <section class="py-5" style="background-color: #FAF8F5;">
+    <div class="container py-3">
+      <div class="row g-5 align-items-center mb-5">
+        <div class="col-lg-6">
+          <h2 class="font-serif fw-bold h2 h1-lg mb-4">Agendar es muy fácil</h2>
+          <div class="d-flex mb-3">
+            <div class="me-3 fs-3 fw-bold text-warning font-serif">01</div>
+            <div>
+              <h3 class="h5 fw-bold mb-1">Escríbenos por WhatsApp</h3>
+              <p class="text-muted small mb-0">Cuéntanos qué tratamiento te interesa o solicita una guía directa.</p>
+            </div>
+          </div>
+          <div class="d-flex mb-3">
+            <div class="me-3 fs-3 fw-bold text-warning font-serif">02</div>
+            <div>
+              <h3 class="h5 fw-bold mb-1">Elige tu horario</h3>
+              <p class="text-muted small mb-0">Te proponemos el espacio que mejor se adapte a ti.</p>
+            </div>
+          </div>
+          <div class="d-flex mb-4">
+            <div class="me-3 fs-3 fw-bold text-warning font-serif">03</div>
+            <div>
+              <h3 class="h5 fw-bold mb-1">Disfruta tu valoración</h3>
+              <p class="text-muted small mb-0">Michelle evalúa tu piel detalladamente y te atiende.</p>
+            </div>
+          </div>
+          <a href="https://wa.me/593983957367?text=Hola!%20Quisiera%20agendar%20una%20cita%20en%20Glow%20Beauty." target="_blank" rel="noopener noreferrer" class="btn btn-glow btn-whatsapp-animated px-4 py-3">
+            <i class="fa-brands fa-whatsapp me-2"></i> Agendar por WhatsApp
+          </a>
+        </div>
+        <div class="col-lg-6">
+          <h2 class="h3 font-serif fw-bold mb-4">Preguntas frecuentes</h2>
+          <div class="accordion accordion-flush shadow-sm rounded-4 overflow-hidden border" id="faqAccordion">
+            <div class="accordion-item">
+              <h3 class="accordion-header">
+                <button class="accordion-button fw-bold shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">¿Necesito una valoración previa?</button>
+              </h3>
+              <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+                <div class="accordion-body text-muted small">Sí. En todos nuestros tratamientos realizamos una valoración personalizada para elegir lo más adecuado para tu piel.</div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h3 class="accordion-header">
+                <button class="accordion-button collapsed fw-bold shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">¿Cuánto dura un facial?</button>
+              </h3>
+              <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                <div class="accordion-body text-muted small">Entre 1 hora 30 minutos y 2 horas, e incluye masaje relajante de hombros, escote, rostro y brazos.</div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h3 class="accordion-header">
+                <button class="accordion-button collapsed fw-bold shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">¿Qué medios de pago aceptan?</button>
+              </h3>
+              <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                <div class="accordion-body text-muted small">Efectivo, transferencia bancaria y tarjeta.</div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h3 class="accordion-header">
+                <button class="accordion-button collapsed fw-bold shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#faq4">¿Tienen gift cards?</button>
+              </h3>
+              <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                <div class="accordion-body text-muted small">Sí, por el valor o el tratamiento que quieras regalar.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- LLAMADA FINAL -->
+  <section class="py-5 text-center text-white position-relative" style="background: linear-gradient(135deg, #4A2C0B 0%, #2F1B07 100%);">
+    <div class="container py-4 position-relative z-2">
+      <h2 class="font-serif fw-bold h2 h1-lg mb-3">¿Lista para lucir tu mejor versión?</h2>
+      <p class="lead mb-4 text-white-50 mx-auto fs-6 fs-lg-5" style="max-width: 600px;">Agenda tu valoración por WhatsApp y descubre el tratamiento ideal para tu piel.</p>
+      <a href="https://wa.me/593983957367?text=Hola!%20Quisiera%20agendar%20una%20cita%20en%20Glow%20Beauty." target="_blank" rel="noopener noreferrer" class="btn btn-glow btn-whatsapp-animated btn-lg px-5 py-3">
+        <i class="fa-brands fa-whatsapp fs-4 me-2"></i> Escribir por WhatsApp
+      </a>
+    </div>
+  </section>
+
+  <!-- UBICACIÓN Y HORARIOS -->
+  <section id="ubicacion" class="py-5 bg-white">
+    <div class="container py-3">
+      <div class="text-center mb-5">
+        <h2 class="font-serif fw-bold h2 h1-lg">Visítanos</h2>
+        <div class="mx-auto mt-2" style="width: 50px; height: 3px; background-color: var(--color-gold);"></div>
+      </div>
+      <div class="row g-4 justify-content-center">
+        <div class="col-lg-6">
+          <div class="p-4 rounded-4 border shadow-sm h-100 bg-light">
+            <h3 class="h4 font-serif fw-bold mb-3"><i class="fa-solid fa-location-dot text-warning me-2"></i> Glow Beauty en Cuenca</h3>
+            <p class="text-muted mb-2"><strong>Dirección:</strong> Av. Unidad Nacional #383 y Calle del Batán (Primera Planta)</p>
+            <p class="text-muted mb-3"><strong>Referencia:</strong> Cajero Coop CB</p>
+            <hr class="my-3 opacity-25">
+            <p class="text-muted mb-1"><strong>Horario de atención:</strong></p>
+            <ul class="list-unstyled text-muted small mb-4">
+              <li class="mb-1">📅 Lunes a Viernes: 08h30 a 13h00 y de 14h30 a 19h00</li>
+              <li>📅 Sábados: 08h30 a 16h30</li>
+            </ul>
+            <a href="https://maps.google.com/?q=Av.+Unidad+Nacional+383+Cuenca+Ecuador" target="_blank" rel="noopener noreferrer" class="btn btn-outline-glow w-100 py-2 text-dark border-warning">
+              <i class="fa-solid fa-map-location-dot me-2"></i> Cómo llegar en Google Maps
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="py-5 text-center text-md-start">
+    <div class="container">
+      <div class="row g-4 align-items-center">
+        <div class="col-md-6 text-center text-md-start">
+          <img src="https://i.imgur.com/mj0HJB0.png" alt="Glow Beauty Logo Footer" style="height: 44px; filter: brightness(0) invert(1);" class="mb-2" loading="lazy">
+          <p class="text-white-50 small mb-0">Centro estético y spa profesional en Cuenca, Ecuador.</p>
+        </div>
+        <div class="col-md-6 text-center text-md-end">
+          <div class="d-flex justify-content-center justify-content-md-end gap-3 mb-3">
+            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="text-white fs-5" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" class="text-white fs-5" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
+            <a href="https://wa.me/593983957367" target="_blank" rel="noopener noreferrer" class="text-white fs-5" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+          </div>
+          <p class="text-white-50 small mb-0">&copy; 2026 Glow Beauty. Todos los derechos reservados.</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- WHATSAPP FLOTANTE CON ANIMACIÓN -->
+  <a href="https://wa.me/593983957367?text=Hola!%20Quisiera%20agendar%20una%20cita%20en%20Glow%20Beauty." class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Chat WhatsApp">
+    <i class="fa-brands fa-whatsapp"></i>
+  </a>
+
+  <!-- BARRA STICKY INFERIOR PARA MÓVILES (Optimización UX móvil) -->
+  <div class="mobile-sticky-bar d-lg-none">
+    <a href="https://wa.me/593983957367?text=Hola!%20Quisiera%20agendar%20una%20cita%20en%20Glow%20Beauty." target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp-animated flex-grow-1 py-2 fs-6 rounded-pill d-flex align-items-center justify-content-center">
+      <i class="fa-brands fa-whatsapp fs-5 me-2"></i> WhatsApp
+    </a>
+    <button class="btn btn-glow flex-grow-1 py-2 fs-6 rounded-pill" data-bs-toggle="modal" data-bs-target="#reservaModal" data-servicio="Valoración y Cita General">
+      <i class="fa-regular fa-calendar-days me-2"></i> Agendar Cita
+    </button>
+  </div>
+
+  <!-- MODAL DE RESERVA INTERACTIVO -->
+  <div class="modal fade" id="reservaModal" tabindex="-1" aria-labelledby="reservaModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content rounded-4 border-0 shadow-lg">
+        <div class="modal-header border-0 pb-0 pt-4 px-4">
+          <h3 class="modal-title h4 font-serif fw-bold" id="reservaModalLabel">Solicitar cita</h3>
+          <button type="button" class="btn-close shadow-none" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+        </div>
+        <div class="modal-body p-4">
+          <form id="whatsappForm">
+            <div class="mb-3">
+              <label for="modalServicio" class="form-label small fw-semibold text-muted">Tratamiento seleccionado:</label>
+              <input type="text" class="form-control bg-light fw-bold" id="modalServicio" readonly>
+            </div>
+            <div class="mb-3">
+              <label for="modalNombre" class="form-label small fw-semibold text-muted">Tu nombre y apellido:</label>
+              <input type="text" class="form-control" id="modalNombre" placeholder="Ej. María Pérez" required>
+            </div>
+            <div class="mb-4">
+              <label for="modalHorario" class="form-label small fw-semibold text-muted">Día u horario deseado:</label>
+              <input type="text" class="form-control" id="modalHorario" placeholder="Ej. El sábado por la mañana" required>
+            </div>
+            <button type="submit" class="btn btn-glow btn-whatsapp-animated w-100 py-3 fw-bold">
+              <i class="fa-brands fa-whatsapp me-2"></i> Continuar por WhatsApp
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bootstrap JS Bundle -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  
+  <script>
+    // Auto-cierre del menú móvil al hacer clic en un enlace de navegación
+    const navLinks = document.querySelectorAll('.navbar-nav .nav-link');
+    const navbarCollapse = document.getElementById('navbarNav');
+    navLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        const bsCollapse = bootstrap.Collapse.getInstance(navbarCollapse);
+        if (bsCollapse && navbarCollapse.classList.contains('show')) {
+          bsCollapse.hide();
+        }
+      });
+    });
+
+    // Filtrado de servicios por categoría
+    const filterButtons = document.querySelectorAll('#filtroCategorias .filter-btn');
+    filterButtons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        filterButtons.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        const filtro = btn.getAttribute('data-filter');
+
+        document.querySelectorAll('#contenedorServicios .item-servicio').forEach(item => {
+          if (filtro === 'todos' || item.getAttribute('data-categoria') === filtro) {
+            item.style.display = 'block';
+          } else {
+            item.style.display = 'none';
+          }
+        });
+      });
+    });
+
+    // Buscador interactivo en tiempo real
+    const inputBuscador = document.getElementById('buscadorServicios');
+    inputBuscador.addEventListener('input', (e) => {
+      const termino = e.target.value.toLowerCase().trim();
+      document.querySelectorAll('#contenedorServicios .item-servicio').forEach(item => {
+        const texto = item.innerText.toLowerCase();
+        if (texto.includes(termino)) {
+          item.style.display = 'block';
+        } else {
+          item.style.display = 'none';
+        }
+      });
+    });
+
+    // Sincronización del Modal de Reserva con WhatsApp
+    const reservaModal = document.getElementById('reservaModal');
+    reservaModal.addEventListener('show.bs.modal', function (event) {
+      const button = event.relatedTarget;
+      const servicio = button.getAttribute('data-servicio');
+      document.getElementById('modalServicio').value = servicio;
+    });
+
+    document.getElementById('whatsappForm').addEventListener('submit', function (e) {
+      e.preventDefault();
+      const nombre = document.getElementById('modalNombre').value.trim();
+      const servicio = document.getElementById('modalServicio').value;
+      const horario = document.getElementById('modalHorario').value.trim();
+      
+      const mensaje = `Hola! Mi nombre es ${nombre}. Quisiera reservar una cita para ${servicio} en Glow Beauty. Preferencia: ${horario}.`;
+      const url = `https://wa.me/593983957367?text=${encodeURIComponent(mensaje)}`;
+      window.open(url, '_blank');
+    });
+  </script>
+</body>
+</html>
